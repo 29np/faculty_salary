@@ -1,0 +1,65 @@
+Project : 3.5 Faculty View Salary History:
+
+	Ask the faculty to login and then display the salary, the history of salary disbursements, also allow them to download the salary slip 		of a particular month.
+
+1)Tables used in this project:
+
+	a)Faculty-
+
+		+----------+--------------+------+-----+---------+-------+
+		| Field    | Type         | Null | Key | Default | Extra |
+		+----------+--------------+------+-----+---------+-------+
+		| id       | varchar(10)  | YES  | PRI | NULL    |       |
+		| name     | varchar(20)  | YES  |     | NULL    |       |
+		| photo    | varchar(500) | YES  |     | NULL    |       |
+		| username | varchar(40)  | YES  |     | NULL    |       |
+		| password | varchar(10)  | YES  |     | NULL    |       |
+		| salary   | int(8)       | YES  |     | NULL    |       |
+		+----------+--------------+------+-----+---------+-------+
+
+	b)Salary-
+		
+		+-----------------+-------------+------+-----+---------+-------+
+		| Field           | Type        | Null | Key | Default | Extra |
+		+-----------------+-------------+------+-----+---------+-------+
+		| id              | varchar(10) | YES  | PRI | NULL    |       |
+		| year            | int(4)      | YES  | PRI | NULL    |       |
+		| monthno         | int(2)      | YES  | PRI | NULL    |       |
+		| transaction_id1 | varchar(20) | YES  |     | NULL    |       |
+		| transaction_id2 | varchar(20) | YES  |     | NULL    |       |
+		| transaction_id3 | varchar(20) | YES  |     | NULL    |       |
+		| part1           | date        | YES  |     | NULL    |       |
+		| part2           | date        | YES  |     | NULL    |       |
+		| part3           | date        | YES  |     | NULL    |       |
+		| amount1         | int(8)      | YES  |     | NULL    |       |
+		| amount2         | int(8)      | YES  |     | NULL    |       |
+		| amount3         | int(8)      | YES  |     | NULL    |       |
+		+-----------------+-------------+------+-----+---------+-------+
+
+	* In Faculty table id is the primary key and in Salary table (id,year,monthno) are the primary key.
+	* id int Salary table is foreign key referencing to primary key id to Faculty.
+
+2)Update configurations in the following files:
+
+	*Database details:
+		/academicerp/src/main/resources/hibernate.properties
+	*Other Configurations:
+		/academicerp/src/main/resources/config.properties	
+
+3)Running the Application:
+	
+	* Download the Tomcat Server
+	* Add its configuration to your project
+	* Add the exploded war artifact to the deployment
+	* Set the Application Context
+
+4)Insert data into tables and connect mysql with hibernate.
+
+5)Troubleshooting:
+
+	* If the changes made in your project don't reflect in your browser kindly:
+	* Clear Browser Cache & Cookies
+	* Delete the /target directory
+	* Run on the IntelliJ Terminal $ mvn clean install
+		
+		

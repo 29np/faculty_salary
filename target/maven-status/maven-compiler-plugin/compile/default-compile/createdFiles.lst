@@ -1,0 +1,17 @@
+util/Id_fac.class
+org/MyResource.class
+service/impl/FacultyServiceImpl.class
+App.class
+util/Send_details.class
+service/FacultyService.class
+bean/Salary.class
+bean/Faculty.class
+util/SessionUtil.class
+controller/FacultyController.class
+dao/FacultyDao.class
+util/Get_date_year.class
+controller/test.class
+util/User.class
+dao/SalaryDao.class
+service/SalaryService.class
+service/impl/SalaryServiceImpl.class
